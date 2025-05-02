@@ -392,7 +392,7 @@ export default function Home() {
             </p>
             <Button
               size="sm"
-              className="h-9 sm:h-10 px-5 sm:px-6 text-xs sm:text-sm bg-white dark:bg-white text-primary dark:text-primary hover:bg-gray-100 dark:hover:bg-gray-200 font-medium shadow-lg"
+              className="h-9 sm:h-10 px-5 sm:px-6 text-xs sm:text-sm bg-white dark:bg-white text-black dark:text-black hover:bg-gray-100 dark:hover:bg-gray-200 font-semibold shadow-lg"
               asChild
             >
               <Link href="/curso">Comenzar el curso ahora</Link>
