@@ -12,7 +12,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between px-4 max-w-7xl">
+      <div className="container flex h-12 sm:h-14 items-center justify-between px-2 sm:px-4 max-w-7xl">
         {/* Mobile Navigation */}
         <div className="md:hidden">
           <MobileNav />
@@ -25,7 +25,7 @@ export function Header() {
         </div>
 
         {/* Menú de navegación centrado - solo visible en desktop */}
-        <nav className="hidden md:flex items-center justify-center space-x-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 text-sm font-medium">
           <Link
             href="/"
             className={`transition-colors hover:text-foreground/80 ${
@@ -70,16 +70,16 @@ export function Header() {
 
         {/* Logo centrado en móvil */}
         <div className="md:hidden flex-1 flex justify-center">
-          <Link href="/" className="font-semibold text-lg">
+          <Link href="/" className="font-semibold text-base sm:text-lg">
             Curso VG
           </Link>
         </div>
 
-        <div className="flex-1 flex items-center justify-end space-x-4">
+        <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-4">
           <ThemeToggle />
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" asChild>
             <Link href="/perfil">
-              <UserCircle className="h-5 w-5" />
+              <UserCircle className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="sr-only">Perfil</span>
             </Link>
           </Button>

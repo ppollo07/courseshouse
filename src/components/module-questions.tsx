@@ -106,32 +106,44 @@ export function ModuleQuestions({ moduleId }: ModuleQuestionsProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 mt-6">
+    <div className="grid grid-cols-1 gap-4 sm:gap-6 mt-4 sm:mt-6">
       {trueFalseQuestions.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Prueba de Verdadero/Falso</CardTitle>
-            <CardDescription>
+        <Card className="shadow-sm border-muted overflow-hidden">
+          <CardHeader className="bg-muted/30 border-b p-3 sm:p-4">
+            <CardTitle className="text-lg sm:text-xl">Prueba de Verdadero/Falso</CardTitle>
+            <CardDescription className="text-muted-foreground text-xs sm:text-sm">
               Indica si las siguientes afirmaciones son verdaderas o falsas
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
+          <CardContent className="p-3 sm:p-4 pt-4 sm:pt-5">
+            <div className="space-y-4 sm:space-y-5">
               {trueFalseQuestions.map((question, index) => (
-                <div key={index} className="p-4 border rounded-md">
-                  <p className="font-medium mb-2">{index + 1}. {question.question}</p>
-                  <div className="flex gap-2 mt-2">
-                    <Button variant="outline" size="sm">
+                <div key={index} className="p-3 sm:p-4 border rounded-md bg-card/50">
+                  <p className="font-medium mb-2 sm:mb-3 text-sm sm:text-base leading-tight sm:leading-relaxed">
+                    {index + 1}. {question.question}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-2 sm:mt-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 px-4 text-xs sm:text-sm hover:bg-green-100/20 hover:border-green-200 dark:hover:bg-green-900/20 dark:hover:border-green-800"
+                    >
                       Verdadero
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 px-4 text-xs sm:text-sm hover:bg-red-100/20 hover:border-red-200 dark:hover:bg-red-900/20 dark:hover:border-red-800"
+                    >
                       Falso
                     </Button>
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">
-                    <details>
-                      <summary className="cursor-pointer">Ver explicación</summary>
-                      <p className="mt-2 pl-2 border-l-2 border-primary/20">{question.explanation}</p>
+                  <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-muted-foreground">
+                    <details className="bg-muted/30 p-1.5 sm:p-2 rounded-md">
+                      <summary className="cursor-pointer font-medium">Ver explicación</summary>
+                      <div className="mt-1 sm:mt-2 pl-2 sm:pl-3 border-l-2 border-primary/50 py-1 sm:py-2">
+                        <p className="leading-tight sm:leading-relaxed">{question.explanation}</p>
+                      </div>
                     </details>
                   </div>
                 </div>
@@ -142,39 +154,52 @@ export function ModuleQuestions({ moduleId }: ModuleQuestionsProps) {
       )}
 
       {multipleChoiceQuestions.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Prueba de Opción Múltiple</CardTitle>
-            <CardDescription>
+        <Card className="shadow-sm border-muted overflow-hidden">
+          <CardHeader className="bg-muted/30 border-b p-3 sm:p-4">
+            <CardTitle className="text-lg sm:text-xl">Prueba de Opción Múltiple</CardTitle>
+            <CardDescription className="text-muted-foreground text-xs sm:text-sm">
               Selecciona la respuesta correcta para cada pregunta
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
+          <CardContent className="p-3 sm:p-4 pt-4 sm:pt-5">
+            <div className="space-y-4 sm:space-y-5">
               {multipleChoiceQuestions.map((question, index) => (
-                <div key={index} className="p-4 border rounded-md">
-                  <p className="font-medium mb-2">{index + 1}. {question.question}</p>
-                  <div className="space-y-2 mt-2">
+                <div key={index} className="p-3 sm:p-4 border rounded-md bg-card/50">
+                  <p className="font-medium mb-2 sm:mb-3 text-sm sm:text-base leading-tight sm:leading-relaxed">
+                    {index + 1}. {question.question}
+                  </p>
+                  <div className="space-y-2 mt-2 sm:mt-3">
                     {question.options?.map((option, optIndex) => (
                       <div key={optIndex} className="flex items-center">
-                        <Button variant="outline" size="sm" className="w-full justify-start">
-                          {String.fromCharCode(97 + optIndex)}) {option}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full justify-start text-left whitespace-normal h-auto py-2 px-3 sm:py-2.5 sm:px-4 rounded-md hover:bg-primary/10 text-xs sm:text-sm"
+                        >
+                          <span className="mr-1.5 sm:mr-2 font-medium min-w-[16px] sm:min-w-[20px]">{String.fromCharCode(97 + optIndex)})</span>
+                          <span className="leading-tight sm:leading-relaxed">{option}</span>
                         </Button>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">
-                    <details>
-                      <summary className="cursor-pointer">Ver respuesta correcta</summary>
-                      <p className="mt-2 pl-2 border-l-2 border-primary/20">Respuesta correcta: {question.correctAnswer}</p>
+                  <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-muted-foreground">
+                    <details className="bg-muted/30 p-1.5 sm:p-2 rounded-md">
+                      <summary className="cursor-pointer font-medium">Ver respuesta correcta</summary>
+                      <div className="mt-1 sm:mt-2 pl-2 sm:pl-3 border-l-2 border-primary/50 py-1 sm:py-2">
+                        <p className="font-medium text-primary text-xs sm:text-sm">Respuesta correcta:</p>
+                        <p className="mt-0.5 sm:mt-1 leading-tight sm:leading-relaxed">{question.correctAnswer}</p>
+                      </div>
                     </details>
                   </div>
                 </div>
               ))}
             </div>
           </CardContent>
-          <CardFooter>
-            <Button className="w-full">Enviar respuestas</Button>
+          <CardFooter className="border-t bg-muted/20 p-3 sm:p-4">
+            <Button className="w-full md:w-auto md:px-6 md:ml-auto h-8 sm:h-9 text-xs sm:text-sm">
+              <span className="mr-1.5 sm:mr-2">Enviar respuestas</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send-horizontal"><path d="m3 3 3 9-3 9 19-9Z"/><path d="M6 12h16"/></svg>
+            </Button>
           </CardFooter>
         </Card>
       )}

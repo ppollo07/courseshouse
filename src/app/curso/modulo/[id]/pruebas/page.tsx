@@ -38,16 +38,16 @@ export default async function TestsPage(props: { params: Promise<PageParams> }) 
 
   return (
     <MainLayout>
-      <div className="container mx-auto py-10 px-4 md:px-6 max-w-5xl">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+      <div className="container mx-auto py-5 sm:py-8 px-3 sm:px-4 md:px-6 max-w-5xl">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
           <div>
-            <h1 className="text-3xl font-bold">Pruebas del Módulo {moduleId}</h1>
-            <p className="text-muted-foreground text-sm mt-1">{moduleInfo.title}</p>
-            <p className="text-muted-foreground mt-3">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">Pruebas del Módulo {moduleId}</h1>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-0.5 sm:mt-1">{moduleInfo.title}</p>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1.5 sm:mt-2">
               Evalúa tus conocimientos sobre este módulo
             </p>
           </div>
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="sm" className="h-8 sm:h-9 text-xs sm:text-sm px-3 sm:px-4" asChild>
             <Link href={`/curso/modulo/${moduleId}`}>Volver al módulo</Link>
           </Button>
         </div>
