@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Introducción y Conceptos Fundamentales",
+    "description": "Diferencias entre sexo y género, definición de violencia de género, conceptos relacionados, mitos y realidades.",
+    "duration": "6 horas"
+  },
+  {
+    "id": 2,
+    "title": "Tipos y Manifestaciones de la Violencia de Género",
+    "description": "Violencia física, psicológica, sexual, económica, vicaria, institucional, digital y otras formas.",
+    "duration": "10 horas"
+  },
+  {
+    "id": 3,
+    "title": "Magnitud del Problema: Datos y Estadísticas",
+    "description": "Estadísticas globales y en España, feminicidios, costes de la violencia de género.",
+    "duration": "6 horas"
+  },
+  {
+    "id": 4,
+    "title": "Causas y Factores de Riesgo",
+    "description": "Raíces estructurales, modelo ecológico, socialización de género, masculinidades y violencia.",
+    "duration": "8 horas"
+  },
+  {
+    "id": 5,
+    "title": "Impacto y Consecuencias",
+    "description": "Consecuencias para la salud física y mental, impacto en hijos e hijas, impacto social y económico.",
+    "duration": "6 horas"
+  },
+  {
+    "id": 6,
+    "title": "Marco Legal y Derechos",
+    "description": "Marco normativo internacional y en España, derechos de las víctimas, proceso de denuncia.",
+    "duration": "6 horas"
+  },
+  {
+    "id": 7,
+    "title": "Intervención y Servicios de Apoyo",
+    "description": "Principios de intervención, servicios especializados, intervención multidisciplinar.",
+    "duration": "8 horas"
+  },
+  {
+    "id": 8,
+    "title": "Prevención de la Violencia de Género",
+    "description": "Niveles de prevención, estrategias, involucrar a hombres y niños, campañas de sensibilización.",
+    "duration": "8 horas"
+  },
+  {
+    "id": 9,
+    "title": "Grupos Específicos y Violencias Interseccionales",
+    "description": "Enfoque interseccional, violencia contra mujeres migrantes, con discapacidad, LGBTIQ+.",
+    "duration": "2 horas"
+  },
+  {
+    "id": 10,
+    "title": "Conclusiones y Compromiso",
+    "description": "Recapitulación, rol de cada persona, recursos adicionales.",
+    "duration": "Cierre"
+  }
+]

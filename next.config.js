@@ -1,10 +1,5 @@
-import type { NextConfig } from "next";
-
-/**
- * Configuración de Next.js
- * @see https://nextjs.org/docs/app/api-reference/next-config-js
- */
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   /* Opciones generales */
 
   // Deshabilitar ESLint durante la compilación
@@ -41,4 +36,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
