@@ -30,12 +30,7 @@ export function MobileNav() {
       icon: <Library className="h-4 w-4 mr-2.5" />,
       active: pathname.startsWith("/recursos"),
     },
-    {
-      href: "/sobre",
-      label: "Sobre el Curso",
-      icon: <Info className="h-4 w-4 mr-2.5" />,
-      active: pathname.startsWith("/sobre"),
-    },
+
   ];
 
   return (

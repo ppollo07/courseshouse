@@ -56,16 +56,7 @@ export function Header() {
           >
             Recursos
           </Link>
-          <Link
-            href="/sobre"
-            className={`transition-colors hover:text-foreground/80 ${
-              pathname.startsWith("/sobre")
-                ? "text-foreground font-bold"
-                : "text-foreground/60"
-            }`}
-          >
-            Sobre el Curso
-          </Link>
+
         </nav>
 
         {/* Logo centrado en móvil */}
